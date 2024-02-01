@@ -2,3 +2,4 @@ pandas
 PyYAML
 Requests
 snowflake_connector_python
+pyarrow
