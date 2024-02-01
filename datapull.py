@@ -40,10 +40,10 @@ print(df_2)
 
 db = "FINANCEBI_DB"
 schema = "HLI"
-tb = "test_table"
-query = """TRUNCATE TABLE FINANCEBI_DB.hli.test_table"""
+tb = "TEST_TABLE"
+query = """TRUNCATE TABLE FINANCEBI_DB.HLI.TEST_TABLE"""
 
 # Execute queries
-cursor_sf.execute(query) # TODO: NEED TO INSERT GOING FORWARD 
+cursor_sf.execute(query) 
 write_pandas(conn_sf, df=df_2, database=db, schema=schema, table_name=tb)
 conn_sf.close()
