@@ -1,0 +1,8 @@
+snowflake:
+  Description: SnowflakeDB
+  Driver: SnowflakeDSIIDriver
+  acct: mda67638.us-east-1
+  warehouse: FINANCE_WH
+  SSL: on
+  UID: haoyuli
+  PWD: x{iYTozecfrHyT>FBe34NmUd
