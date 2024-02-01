@@ -4,3 +4,4 @@ Requests
 snowflake_connector_python
 pyarrow
 sqlalchemy
+mysql
