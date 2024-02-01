@@ -5,3 +5,4 @@ snowflake_connector_python
 pyarrow
 sqlalchemy
 mysql
+mysql-connector-python
