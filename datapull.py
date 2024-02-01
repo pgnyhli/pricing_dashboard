@@ -34,7 +34,7 @@ weighted_avg_df
 
 # %%
 
-df_2 = weighted_avg_df['AUTHORIZING_PROVIDER']
+df_2 = weighted_avg_df[['AUTHORIZING_PROVIDER']]
 print(df_2)
 # %%
 
