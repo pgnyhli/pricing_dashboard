@@ -6,6 +6,8 @@ import snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
 import datetime as dt
 import yaml
+from sqlalchemy import create_engine
+
 
 #%%
 with open('config/configs.yaml','r') as file: 
@@ -35,7 +37,7 @@ weighted_avg_df
 # %%
 
 df_2 = weighted_avg_df[['AUTHORIZING_PROVIDER']]
-print(df_2)
+# print(df_2)
 # %%
 
 db = "FINANCEBI_DB"
@@ -44,6 +46,22 @@ tb = "TEST_TABLE"
 query = """TRUNCATE TABLE FINANCEBI_DB.HLI.TEST_TABLE"""
 
 # Execute queries
-cursor_sf.execute(query) 
-write_pandas(conn_sf, df=df_2, database=db, schema=schema, table_name=tb)
-conn_sf.close()
+# cursor_sf.execute(query) 
+# write_pandas(conn_sf, df=df_2, database=db, schema=schema, table_name=tb)
+# conn_sf.close()
+
+
+# %%
+#MySQL test
+
+# MySQL test
+with open('config/configs.yaml', 'r') as file:
+    mysqlcredentials = yaml.safe_load(file)['MySQL']
+
+engine = create_engine(f"mysql+mysqlconnector://{mysqlcredentials['user']}:{mysqlcredentials['password']}@{mysqlcredentials['host']}/{mysqlcredentials['database']}")
+
+df_3 = pd.DataFrame(df_2)
+print(df_3)
+
+df_3.to_sql(name='HLI_TEST_TABLE', con=engine, if_exists='replace', index=False)
+print("finished")

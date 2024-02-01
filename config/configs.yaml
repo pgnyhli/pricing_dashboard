@@ -6,3 +6,9 @@ snowflake:
   SSL: on
   UID: haoyuli
   PWD: x{iYTozecfrHyT>FBe34NmUd
+
+MySQL:
+  host : reports-central.crlowiqc9uoe.us-west-2.rds.amazonaws.com
+  database : analytics
+  user : haoyu.li
+  password : Fs6AkTDu8Vw4KLo6
