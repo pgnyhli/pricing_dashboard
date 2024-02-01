@@ -50,5 +50,5 @@ query = """TRUNCATE TABLE FINANCEBI_DB.hli.test_table"""
 
 # Execute queries
 cursor_sf.execute(query) # TODO: NEED TO INSERT GOING FORWARD 
-write_pandas(conn_sf, df=df, database=db, schema=schema, table_name=tb)
+write_pandas(conn_sf, df=df_2, database=db, schema=schema, table_name=tb)
 conn_sf.close()
