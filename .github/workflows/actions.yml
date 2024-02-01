@@ -2,7 +2,7 @@ name: run datapull.py
 
 on:
   schedule:
-    - cron : '* * * * *'
+    - cron : '* 8 * * *'
 
 jobs:
   build:
