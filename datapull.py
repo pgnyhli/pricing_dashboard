@@ -1,17 +1,12 @@
 #%%
-import requests
 import pandas as pd
-import math
-import time
-import configparser
+
 import snowflake
 import snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
-import MySQLdb.cursors
 import datetime as dt
 import yaml
-import os
-import concurrent.futures
+
 #%%
 with open('config/configs.yaml','r') as file: 
     credentials = yaml.safe_load(file)
