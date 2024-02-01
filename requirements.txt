@@ -1,4 +1,4 @@
-pandas==2.0.3
-PyYAML==6.0
-Requests==2.31.0
-snowflake_connector_python==3.0.4
+pandas
+PyYAML
+Requests
+snowflake_connector_python
