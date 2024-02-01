@@ -69,6 +69,5 @@ df.drop(columns=['WEIGHTED_COST'], inplace=True)
 # Displaying the modified DataFrame
 df
 # %%
-boston_ivf_df = df[(df['AUTHORIZING_PROVIDER'] == 'Boston IVF') & (df['CBSA'] == 'Boston-Cambridge-Newton, MA-NH')]
-boston_ivf_df
+print("hello")
 # %%
